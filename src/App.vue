@@ -6,7 +6,7 @@
 			<el-container>
 				<el-aside width="200px">
 					<div class="aside-column">
-					
+						<LeftAsideBar></LeftAsideBar>
 					</div>
 				</el-aside>
 				<el-container>
@@ -28,10 +28,11 @@
 
   import {userMe} from "./api/v1";
   import TopAsideBar from "./components/TopAsideBar";
+  import LeftAsideBar from "./components/LeftAsideBar";
 
   export default {
     name: 'app',
-    components: {TopAsideBar},
+    components: {LeftAsideBar, TopAsideBar},
     data: () => ({
       isLogin: false,	// 用户是否登录
       userInfo: {       // 用户登录之后存入个人信息 可以自己扩展
